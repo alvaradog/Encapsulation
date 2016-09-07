@@ -16,6 +16,7 @@ public class Employee {
 //    private boolean movedIn;
 //    private String cubeId;
     private Date currentDate;
+    Employee_Tasks newHire;
     
 
     public Employee() {
@@ -26,8 +27,9 @@ public class Employee {
         this.firstName = firstName;
         this.lastName = lastName;
         this.ssn = ssn;
-        Employee_Tasks newhire = new Employee_Tasks();
+        newHire = new Employee_Tasks();
     }
+    
 
     public String getFirstName() {
         return firstName;
@@ -51,6 +53,15 @@ public class Employee {
 
     public void setSsn(String ssn) {
         this.ssn = ssn;
+    }
+
+    void performNewHireDuties() {
+        
+        newHire.meetDepartmentStaff();
+        newHire.meetWithHrForBenefitAndSalryInfo();
+        newHire.reviewDeptPolicies();
+
+        System.out.println("The employee's status is: " + newHire.getStatus());
     }
 
 }

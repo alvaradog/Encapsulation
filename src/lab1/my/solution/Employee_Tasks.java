@@ -12,8 +12,7 @@ import java.util.Date;
  *
  * @author alvaradog
  */
-public class Employee_Tasks extends Employee {
-    Employee_Tasks newHire;
+public class Employee_Tasks extends Employee{
     private Date currentDate;
     private boolean metWithHr;
     private boolean metDeptStaff;
@@ -22,7 +21,6 @@ public class Employee_Tasks extends Employee {
     private String cubeId;
     
     
-    // Assume this must be performed first
     public void meetWithHrForBenefitAndSalryInfo() {
         SimpleDateFormat sdf = new SimpleDateFormat("M/d/yyyy");
         String fmtDate = sdf.format(currentDate);
